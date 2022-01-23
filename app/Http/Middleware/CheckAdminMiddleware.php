@@ -19,7 +19,7 @@ class CheckAdminMiddleware
         if(auth()->user()->user_type == 'admin'){
             return $next($request);
         }else{
-            return redirect('posts.index');
+            return redirect()->route('posts.index');
         }
 
     }
